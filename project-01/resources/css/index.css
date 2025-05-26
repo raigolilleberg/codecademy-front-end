@@ -4,21 +4,37 @@
 }
 
 
+h1,
+h2,
+h3,
+span {
+  font-weight: bold;
+}
+
 h1 {
-  color: SeaGreen;
+  font-size: 100px;
+  color: khaki;
+  text-align: center;
+  background-image: url(https://content.codecademy.com/courses/freelance-1/unit-2/pattern.jpeg);
 }
 
-
-p, 
-li {
-  font-size: 18px;
+h2 {
+  font-size: 32px;
+  color: white;
 }
 
-
-a {
-  text-decoration: none;
+span {
+  color: blue;
 }
 
-body {
-  background-color:beige;
+.brushes h2 {
+  background-color: mediumspringgreen;
+}
+
+.frames h2 {
+  background-color: lightcoral;
+}
+
+.paint h2 {
+  background-color: skyblue;
 }
