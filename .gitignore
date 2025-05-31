@@ -1,0 +1,6 @@
+# macOS
+.DS_Store
+
+# Ignore build artifacts or node_modules if you have them:
+node_modules/
+dist/
