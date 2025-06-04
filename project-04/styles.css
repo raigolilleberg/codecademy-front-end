@@ -1,0 +1,296 @@
+
+/* let's reset browser defaults first */
+* {
+  margin: 0;
+  padding: 0;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  color: var(--col-text);
+  list-style: none;
+  box-sizing: border-box;
+  transition: all 200ms;
+}
+html {
+  scroll-behavior: smooth;
+}
+/*  */
+
+/* variables */
+:root {
+
+  /* core colours - neutral */
+  --col-neutral-50: hsl(212, 2%, 97%);
+  --col-neutral-100: hsl(212, 2%, 85%);
+  --col-neutral-200: hsl(212, 2%, 75%);
+  --col-neutral-300: hsl(212, 2%, 65%);
+  --col-neutral-400: hsl(212, 2%, 55%);
+  --col-neutral-500: hsl(212, 2%, 45%);
+  --col-neutral-700: hsl(204, 2%, 33%);
+  --col-neutral-800: hsl(212, 2%, 20%);
+  --col-neutral-900: hsl(212, 2%, 10%);
+
+    /* core colours - primary */
+  --col-primary-50: hsl(167, 66%, 97%);
+  --col-primary-100: hsl(167, 66%, 85%);
+  --col-primary-500: hsl(167, 66%, 36%);
+  --col-primary-800: hsl(167, 66%, 20%);
+  --col-primary-900: hsl(167, 66%, 10%);
+
+    /* core colours - primary */
+  --col-secondary-50: hsl(50, 90%, 97%);
+  --col-secondary-100: hsl(50, 90%, 85%);
+  --col-secondary-500: hsl(50, 90%, 44%);
+  --col-secondary-800: hsl(50, 90%, 20%);
+  --col-secondary-900: hsl(50, 90%, 10%);
+
+  /* semantic colours - background */
+  --col-bg-light: var(--col-neutral-50);
+  --col-bg-heavy: var(--col-neutral-100);
+
+    /* semantic colours - text */
+  --col-text: var(--col-neutral-900);
+  --col-text-link: var(--col-neutral-900);
+  --col-text-disabled: var(--col-neutral-400);
+
+    /* semantic colours - borders */
+  --col-border-light: var(--col-neutral-100);
+  --col-border-heavy: var(--col-neutral-200);
+
+}
+/*  */
+
+/* global - typography */
+h1, h2, h3, p, p a {
+  font-family: "Inter", sans-serif;
+}
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.25rem;
+}
+h3 {
+  font-size: 1.1rem;
+}
+p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+p, 
+p a {
+  font-weight: 400;
+}
+p a:hover {
+  opacity: .6;
+} 
+code {
+  font-size: .8rem;
+}
+/*  */
+
+/* global - layout */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; 
+}
+header,
+main,
+footer {
+  width: 100%;
+}
+header h1,
+header nav,
+main section,
+footer p {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+ul {
+  display: flex;
+}
+/*  */
+
+/* header section */
+header {
+  padding-top: 3vw;
+  padding-bottom: 1.5vw;
+  background-color: var(--col-bg-light);
+}
+header h1 {
+  margin-bottom: .5vw;
+}
+.header-nav--link {
+  margin-right: 1.5vw;
+}
+.header-nav--link:last-child {
+  margin-right: 0;
+}
+/*  */
+
+/* main section */
+main section {
+  padding-bottom: 3vw;
+}
+main section:first-child {
+  padding-top: 3vw;
+}
+main section > h2 {
+  margin-bottom: .5vw;
+}
+/* main - typography */
+.basics-typography > p {
+  margin-bottom: 1.5vw;
+}
+.basics-typography--variants {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: .5vw;
+  padding: 1vw;
+  background-color: var(--col-bg-light);
+  border-radius: .25rem;
+}
+.basics-typography--variants > ul {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+}
+.basics-typography--variants code {
+  color: var(--col-text-disabled);
+}
+.basics-typography--variants p {
+  line-height: 1.2;
+}
+.variant-title-xl {
+  font-size: 1.5rem;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: -0.24px;
+}
+.variant-title-lg {
+  font-size: 1.25rem;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+}
+.variant-title-md {
+  font-size: .8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.variant-body {
+  font-size: .8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.variant-body-heavy {
+  font-size: .8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.2;
+}
+/* main - colours */
+.basics-colour > p {
+  margin-bottom: 1.5vw;
+}
+.basics-colour--palette,
+.basics-colour--palette ul, 
+.basics-colour--palette li {
+  display: flex;
+}
+.basics-colour--palette {
+  flex-direction: column;
+  margin-bottom: .5vw;
+  padding: 1vw;
+  border: .1rem solid var(--col-border-light);
+  border-radius: .25rem;
+} 
+.basics-colour--palette ul {
+  justify-content: space-between;
+}
+.basics-colour--palette li {
+  flex-direction: column;
+  margin-right: .25vw;
+}
+.basics-colour--palette li:last-child {
+  margin-right: 0;
+}
+.basics-colour--palette code {
+  color: var(--col-text-disabled);
+}
+.basics-colour--palette p {
+  line-height: 1.2;
+}
+.basics-colour--palette h3 {
+  margin-bottom: .5vw;
+}
+.col-example {
+  width: 100%;
+  height: 1rem;
+  margin-bottom: .25vw;
+  border-radius: .15rem;
+}
+.col-neutral-50 .col-example {
+  background-color: var(--col-neutral-50);
+}
+.col-neutral-100 .col-example {
+  background-color: var(--col-neutral-100);
+}
+.col-neutral-500 .col-example {
+  background-color: var(--col-neutral-500);
+}
+.col-neutral-800 .col-example {
+  background-color: var(--col-neutral-800);
+}
+.col-neutral-900 .col-example {
+  background-color: var(--col-neutral-900);
+}
+.col-primary-50 .col-example {
+  background-color: var(--col-primary-50);
+}
+.col-primary-100 .col-example {
+  background-color: var(--col-primary-100);
+}
+.col-primary-500 .col-example {
+  background-color: var(--col-primary-500);
+}
+.col-primary-800 .col-example {
+  background-color: var(--col-primary-800);
+}
+.col-primary-900 .col-example {
+  background-color: var(--col-primary-900);
+}
+.col-secondary-50 .col-example {
+  background-color: var(--col-secondary-50);
+}
+.col-secondary-100 .col-example {
+  background-color: var(--col-secondary-100);
+}
+.col-secondary-500 .col-example {
+  background-color: var(--col-secondary-500);
+}
+.col-secondary-800 .col-example {
+  background-color: var(--col-secondary-800);
+}
+.col-secondary-900 .col-example {
+  background-color: var(--col-secondary-900);
+}
+/*  */
+
+/* footer section */
+footer {
+  margin-top: auto;
+  padding-top: 3vw;
+  padding-bottom: 1.5vw;
+  /* height: 100%; */
+  background-color: var(--col-bg-light);
+}
+footer p,
+footer p a {
+  color: var(--col-text-disabled);
+}
+/*  */
