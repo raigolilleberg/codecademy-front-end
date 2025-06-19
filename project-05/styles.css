@@ -1,296 +1,347 @@
-
+/* ———————————————————————— */
 /* let's reset browser defaults first */
-* {
-  margin: 0;
-  padding: 0;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  color: var(--col-text);
-  list-style: none;
-  box-sizing: border-box;
-  transition: all 200ms;
-}
-html {
-  scroll-behavior: smooth;
-}
-/*  */
+/* ———————————————————————— */
 
-/* variables */
-:root {
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    transition: all 200ms;
+  }
 
-  /* core colours - neutral */
-  --col-neutral-50: hsl(212, 2%, 97%);
-  --col-neutral-100: hsl(212, 2%, 85%);
-  --col-neutral-200: hsl(212, 2%, 75%);
-  --col-neutral-300: hsl(212, 2%, 65%);
-  --col-neutral-400: hsl(212, 2%, 55%);
-  --col-neutral-500: hsl(212, 2%, 45%);
-  --col-neutral-700: hsl(204, 2%, 33%);
-  --col-neutral-800: hsl(212, 2%, 20%);
-  --col-neutral-900: hsl(212, 2%, 10%);
+  html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+  }
 
-    /* core colours - primary */
-  --col-primary-50: hsl(167, 66%, 97%);
-  --col-primary-100: hsl(167, 66%, 85%);
-  --col-primary-500: hsl(167, 66%, 36%);
-  --col-primary-800: hsl(167, 66%, 20%);
-  --col-primary-900: hsl(167, 66%, 10%);
+/* ———————————————————————— */
 
-    /* core colours - primary */
-  --col-secondary-50: hsl(50, 90%, 97%);
-  --col-secondary-100: hsl(50, 90%, 85%);
-  --col-secondary-500: hsl(50, 90%, 44%);
-  --col-secondary-800: hsl(50, 90%, 20%);
-  --col-secondary-900: hsl(50, 90%, 10%);
+/* — */
 
-  /* semantic colours - background */
-  --col-bg-light: var(--col-neutral-50);
-  --col-bg-heavy: var(--col-neutral-100);
+/* ———————————————————————— */
+/* theming — colours */
+/* ———————————————————————— */
 
-    /* semantic colours - text */
-  --col-text: var(--col-neutral-900);
-  --col-text-link: var(--col-neutral-900);
-  --col-text-disabled: var(--col-neutral-400);
+  :root {
 
-    /* semantic colours - borders */
-  --col-border-light: var(--col-neutral-100);
-  --col-border-heavy: var(--col-neutral-200);
+    /* basic - neutral */
+    --col-neutral-50: hsl(212, 2%, 97%);
+    --col-neutral-100: hsl(212, 2%, 85%);
+    --col-neutral-200: hsl(212, 2%, 75%);
+    --col-neutral-300: hsl(212, 2%, 65%);
+    --col-neutral-400: hsl(212, 2%, 55%);
+    --col-neutral-500: hsl(212, 2%, 45%);
+    --col-neutral-700: hsl(204, 2%, 33%);
+    --col-neutral-800: hsl(212, 2%, 20%);
+    --col-neutral-900: black;
 
-}
-/*  */
+    /* brand - primary */
+    --col-brand-primary-50: seashell;
+    --col-brand-primary-100: hsl(167, 66%, 85%);
+    --col-brand-primary-500: hsl(167, 66%, 36%);
+    --col-brand-primary-800: hsl(167, 66%, 20%);
+    --col-brand-primary-900: hsl(167, 66%, 10%);
 
-/* global - typography */
-h1, h2, h3, p, p a {
-  font-family: "Inter", sans-serif;
-}
-h1 {
-  font-size: 1.5rem;
-}
-h2 {
-  font-size: 1.25rem;
-}
-h3 {
-  font-size: 1.1rem;
-}
-p {
-  font-size: 1.1rem;
-  line-height: 1.4;
-}
-p, 
-p a {
-  font-weight: 400;
-}
-p a:hover {
-  opacity: .6;
-} 
-code {
-  font-size: .8rem;
-}
-/*  */
+    /* brand - secondary */
+    --col-brand-secondary-50: hsl(50, 90%, 97%);
+    --col-brand-secondary-100: hsl(50, 90%, 85%);
+    --col-brand-secondary-500: hsl(50, 90%, 44%);
+    --col-brand-secondary-800: hsl(50, 90%, 20%);
+    --col-brand-secondary-900: hsl(50, 90%, 10%);
 
-/* global - layout */
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column; 
-}
-header,
-main,
-footer {
-  width: 100%;
-}
-header h1,
-header nav,
-main section,
-footer p {
-  max-width: 60rem;
-  margin: 0 auto;
-  padding-left: 3vw;
-  padding-right: 3vw;
-}
-ul {
-  display: flex;
-}
-/*  */
+    /* utility - background */
+    --col-bg-primary: var(--col-neutral-50);
+    --col-bg-secondary: var(--col-neutral-100);
 
-/* header section */
-header {
-  padding-top: 3vw;
-  padding-bottom: 1.5vw;
-  background-color: var(--col-bg-light);
-}
-header h1 {
-  margin-bottom: .5vw;
-}
-.header-nav--link {
-  margin-right: 1.5vw;
-}
-.header-nav--link:last-child {
-  margin-right: 0;
-}
-/*  */
+    /* utility - foreground */
+    --col-bg-primary: var(--col-neutral-900);
+    --col-bg-secondary: var(--col-neutral-800);
 
-/* main section */
-main section {
-  padding-bottom: 3vw;
-}
-main section:first-child {
-  padding-top: 3vw;
-}
-main section > h2 {
-  margin-bottom: .5vw;
-}
-/* main - typography */
-.basics-typography > p {
-  margin-bottom: 1.5vw;
-}
-.basics-typography--variants {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: .5vw;
-  padding: 1vw;
-  background-color: var(--col-bg-light);
-  border-radius: .25rem;
-}
-.basics-typography--variants > ul {
-  display: flex;
-  flex-direction: column;
-  width: 20rem;
-}
-.basics-typography--variants code {
-  color: var(--col-text-disabled);
-}
-.basics-typography--variants p {
-  line-height: 1.2;
-}
-.variant-title-xl {
-  font-size: 1.5rem;
-  font-style: normal;
-  line-height: 1.2;
-  letter-spacing: -0.24px;
-}
-.variant-title-lg {
-  font-size: 1.25rem;
-  font-style: normal;
-  line-height: 1.2;
-  letter-spacing: -0.2px;
-}
-.variant-title-md {
-  font-size: .8rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.2;
-}
-.variant-body {
-  font-size: .8rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.2;
-}
-.variant-body-heavy {
-  font-size: .8rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.2;
-}
-/* main - colours */
-.basics-colour > p {
-  margin-bottom: 1.5vw;
-}
-.basics-colour--palette,
-.basics-colour--palette ul, 
-.basics-colour--palette li {
-  display: flex;
-}
-.basics-colour--palette {
-  flex-direction: column;
-  margin-bottom: .5vw;
-  padding: 1vw;
-  border: .1rem solid var(--col-border-light);
-  border-radius: .25rem;
-} 
-.basics-colour--palette ul {
-  justify-content: space-between;
-}
-.basics-colour--palette li {
-  flex-direction: column;
-  margin-right: .25vw;
-}
-.basics-colour--palette li:last-child {
-  margin-right: 0;
-}
-.basics-colour--palette code {
-  color: var(--col-text-disabled);
-}
-.basics-colour--palette p {
-  line-height: 1.2;
-}
-.basics-colour--palette h3 {
-  margin-bottom: .5vw;
-}
-.col-example {
-  width: 100%;
-  height: 1rem;
-  margin-bottom: .25vw;
-  border-radius: .15rem;
-}
-.col-neutral-50 .col-example {
-  background-color: var(--col-neutral-50);
-}
-.col-neutral-100 .col-example {
-  background-color: var(--col-neutral-100);
-}
-.col-neutral-500 .col-example {
-  background-color: var(--col-neutral-500);
-}
-.col-neutral-800 .col-example {
-  background-color: var(--col-neutral-800);
-}
-.col-neutral-900 .col-example {
-  background-color: var(--col-neutral-900);
-}
-.col-primary-50 .col-example {
-  background-color: var(--col-primary-50);
-}
-.col-primary-100 .col-example {
-  background-color: var(--col-primary-100);
-}
-.col-primary-500 .col-example {
-  background-color: var(--col-primary-500);
-}
-.col-primary-800 .col-example {
-  background-color: var(--col-primary-800);
-}
-.col-primary-900 .col-example {
-  background-color: var(--col-primary-900);
-}
-.col-secondary-50 .col-example {
-  background-color: var(--col-secondary-50);
-}
-.col-secondary-100 .col-example {
-  background-color: var(--col-secondary-100);
-}
-.col-secondary-500 .col-example {
-  background-color: var(--col-secondary-500);
-}
-.col-secondary-800 .col-example {
-  background-color: var(--col-secondary-800);
-}
-.col-secondary-900 .col-example {
-  background-color: var(--col-secondary-900);
-}
-/*  */
+    /* utilty - text */
+    --col-text-default: var(--col-brand-primary-50);
+    --col-text-link: var(--col-brand-primary-50);
+    --col-text-disabled: var(--col-neutral-400);
 
-/* footer section */
-footer {
-  margin-top: auto;
-  padding-top: 3vw;
-  padding-bottom: 1.5vw;
-  /* height: 100%; */
-  background-color: var(--col-bg-light);
-}
-footer p,
-footer p a {
-  color: var(--col-text-disabled);
-}
-/*  */
+    /* utility - borders */
+    --col-border-primary: var(--col-neutral-100);
+    --col-border-secondary: var(--col-neutral-200);
+
+  }
+
+/* ———————————————————————— */
+
+
+/* — */
+
+
+/* ———————————————————————— */
+/* theming — typography */
+/* ———————————————————————— */
+
+  * {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    color: var(--col-text-default);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    line-height: 1;
+  }
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 3.2rem;    
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+
+  h5 {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  h4,
+  p,
+  p a {
+    font-size: 2.2rem;
+  }
+
+  p, 
+  p a {
+    font-weight: 300;
+    line-height: 1.4;
+  }
+
+  p a:hover {
+    opacity: .6;
+  } 
+
+/* ———————————————————————— */
+
+
+/* — for later to add: spacing, rad */
+
+
+/* ———————————————————————— */
+/* global — layout */
+/* ———————————————————————— */
+
+  body {
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;
+    background-color: black;
+  }
+
+  nav,
+  .our-mission,
+  main {
+    padding: 0 1rem;
+  }
+
+/* ———————————————————————— */
+
+
+/* — */
+
+
+/* ———————————————————————— */
+/* header content */
+/* ———————————————————————— */
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 796px;
+    margin-top: 69px;
+    margin-bottom: 10rem;
+    background: url(img/img-mission-background.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 69px;
+    background-color: var(--col-bg-primary);
+    border-bottom: .1rem solid seashell;
+  }
+
+  .nav-logo {
+    display: flex;
+    height: 50px;
+  }
+  .nav-logo:hover {
+    opacity: .6;
+  }
+
+  .nav-items {
+    display: flex;
+  }
+  .nav-items li {
+    margin-right: 2.4rem;
+  }
+  .nav-items li:last-child {
+    margin-right: 0;
+  }
+
+/* ———————————————————————— */
+
+
+/* — */
+
+
+/* ———————————————————————— */
+/* main content */
+/* ———————————————————————— */
+
+  main {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    width: 100%;
+  }
+
+  main section {
+    margin-bottom: 10rem;
+  }
+
+  .our-mission,
+  .tea-of-the-mo,
+  .locations,
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .our-mission {
+    max-width: 120rem;
+    margin: 0 1rem;
+    padding: 1.5rem 2rem;
+    background-color: var(--col-bg-primary);
+  }
+
+  .tea-of-the-mo {
+    max-width: 100rem; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+    .tea-of-the-mo p {
+      margin-bottom: 4rem;
+    }
+
+    .tea-types {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem 4rem;
+    }
+      .tea-types li img {
+        width: 30rem;
+        height: 20rem;
+        margin-bottom: 1rem;
+      }
+      .tea-types li h4 {
+        margin-bottom: 2rem;
+      }
+
+  .locations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 120rem;
+    min-height: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5rem 0;
+    background-image: url(img/img-locations-background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+  }
+    .locations h2 {
+      margin-bottom: 4rem;
+    }
+    .locations h3 {
+      margin-bottom: 2rem;
+    }
+    .locations--addresses {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem 4rem;
+      width: 100%;
+    }
+    .locations--addresses li {
+      display: flex;
+      flex-direction: column;;
+      width: 30rem;
+      padding: 4rem 2rem;
+      background-color: var(--col-bg-primary);
+    }
+
+    .contacts {
+      width: 100%;
+      height: 20rem;
+      margin-bottom: 0;
+    }
+      .contacts h5 {
+        margin-bottom: 1.5rem;
+      }
+      .contacts h5:last-child {
+        margin-bottom: 0;
+      }
+
+/* ———————————————————————— */
+
+
+/* — */
+
+
+/* ———————————————————————— */
+/* footer content */
+/* ———————————————————————— */
+
+  footer p,
+  footer p a {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  footer p {
+    padding: 0 2rem;
+  }
+
+  .footer-raigo {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem .2rem;
+    background-color: var(--col-bg-secondary);
+  }
+
+  .footer-raigo p,
+  .footer-raigo p a {
+    font-size: 1.6rem;
+  }
+  .footer-raigo p {
+    opacity: .6;
+  }
+
+/* ———————————————————————— */
