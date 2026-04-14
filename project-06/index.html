@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scattered Card Stack</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <section class="tabletop" aria-label="Scattered stack of cards">
+      <div class="card-stack" id="cardStack">
+        <article class="card"><h2>Card 1</h2><p>Ideas</p></article>
+        <article class="card"><h2>Card 2</h2><p>Sketches</p></article>
+        <article class="card"><h2>Card 3</h2><p>Concepts</p></article>
+        <article class="card"><h2>Card 4</h2><p>Moodboard</p></article>
+        <article class="card"><h2>Card 5</h2><p>Final Notes</p></article>
+      </div>
+    </section>
+
+    <aside class="controls" aria-label="Card stack controls">
+      <h1>Stack Controls</h1>
+
+      <label for="rotationRange">Rotation range: <output id="rotationValue">12°</output></label>
+      <input id="rotationRange" type="range" min="0" max="40" value="12">
+
+      <label for="offsetRange">Vertical offset: <output id="offsetValue">22px</output></label>
+      <input id="offsetRange" type="range" min="0" max="60" value="22">
+
+      <label for="shadowBlurRange">Shadow blur: <output id="shadowBlurValue">24px</output></label>
+      <input id="shadowBlurRange" type="range" min="0" max="60" value="24">
+
+      <label for="shadowOpacityRange">Shadow opacity: <output id="shadowOpacityValue">0.22</output></label>
+      <input id="shadowOpacityRange" type="range" min="0" max="80" value="22">
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
